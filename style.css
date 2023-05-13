@@ -1,0 +1,173 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  --header-font: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --logo-font: 'Rock Salt', cursive ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --main-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --form-font: 'Zen Kaku Gothic Antique', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+}
+
+.image-container {
+  background-image: url('./images/bacon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-container > .logo-container {
+  background: rgba(54, 5, 5, 0.274);
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container > img {
+  filter: brightness(0) invert(1);
+  width: 10rem;
+}
+
+.logo-container > .title {
+  font-family: var(--logo-font);
+  font-weight: bolder;
+  color: antiquewhite;
+  font-size: 3rem;
+}
+
+.image-container > .footer {
+  font-family: var(--main-font);
+  color: antiquewhite;
+  margin-bottom: 0.5rem;
+  align-self: center;
+  font-size: 0.6rem;
+}
+
+a {
+  color: inherit;
+  font-weight: bolder;
+}
+
+.main-container {
+  height: 100%;
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container > .header-container {
+  color: rgb(24, 1, 1);
+  background-color: rgb(247, 246, 250);
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  font-family: var(--header-font);
+  font-weight: bolder;
+}
+
+.header-container > div {
+  max-width: 40rem;
+  margin-bottom: 1rem;
+  line-height: 1.2rem;
+}
+
+.main-container > .form-container {
+  color: rgb(68, 63, 63);
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.form-container > h4 {
+  font-family: var(--main-font);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.form-container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-container .form-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.form-container .form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-input > label {
+  font-family: var(--form-font);
+  font-weight: bolder;
+  font-size: 0.8rem;
+}
+
+.form-input > input {
+  font-family: var(--main-font);
+  border: 1px solid rgb(68, 63, 63) ;
+  border-radius: 6px;
+  height: 1.4rem;
+  padding: 2px;
+}
+
+.form-input > input:invalid {
+  box-shadow: 0 0 10px 2px rgb(54, 5, 5);
+}
+
+.form-input > input:focus:invalid {
+  box-shadow: none;
+}
+
+.main-container > .bottom-container {
+  color: rgb(24, 1, 1);
+  background-color: rgb(247, 246, 250);
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.bottom-container > input {
+  background-color: rgb(54, 5, 5);
+  color: antiquewhite;
+  font-family: var(--main-font);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.bottom-container > input:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.bottom-container > input:disabled:hover {
+  opacity: 1;
+  cursor: inherit;
+}
+
+.bottom-container > div {
+  font-family: var(--main-font);
+  font-size: 0.8rem;
+}

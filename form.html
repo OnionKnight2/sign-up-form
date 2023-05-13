@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rock+Salt&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>Pig</title>
+</head>
+<body>
+  <div class="image-container">
+    <div class="logo-container">
+      <img src="images/pig.png" alt="Logo image">
+      <div class="title">PIG</div>
+    </div>
+    <div class="footer">Image by <a href="https://pixabay.com/users/hansuan_fabregas-2902307/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7979098">HANSUAN FABREGAS</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7979098">Pixabay</a></div>
+  </div>
+  <div class="main-container">
+    <div class="header-container">
+      <div>This is not a real online service! You know you need something like this in your life to help you 
+        realize your deepest dreams. Sign up now to get started. </div>
+      <div>You know you want to.</div>
+    </div>
+    <div class="form-container">
+      <h4>Let's do this!</h4>
+      <form action="#" method="post" id="form">
+        <div class="form-row">
+          <div class="form-input">
+            <label for="first_name">FIRST NAME*</label>
+            <input title="Required field" type="text" name="first_name" id="first_name" required>
+          </div>
+          <div class="form-input">
+            <label for="last_name">LAST NAME*</label>
+            <input title="Required field" type="text" name="last_name" id="last_name" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-input">
+            <label for="email">EMAIL*</label>
+            <input title="example@random.org" type="email" name="email" id="email" required>
+          </div>
+          <div class="form-input">
+            <label for="phone_number">PHONE NUMBER</label>
+            <input type="tel" name="phone_number" id="phone_number">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-input">
+            <label for="password">PASSWORD*</label>
+            <input title="Must include lowcase letter, upcase letter and a number" onkeyup='check();' type="password" name="password" id="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+          </div>
+          <div class="form-input">
+            <label for="password_confirm">CONFIRM PASSWORD*</label>
+            <input title="Must be equal to password" onkeyup='check()' type="password" name="password_confirm" id="password_confirm" required>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="bottom-container">
+      <input type="submit" id="submit" form="form" value="Create Account">
+      <div class="login">
+        Already have an account? <a href="#">Log in</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
